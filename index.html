@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="./js/app.js"></script>
+    <title>CSS Animation</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li><a href="#transition">Transition</a></li>
+            <li><a href="#transform">Transform</a></li>
+            <li><a href="#3Dtransforms">3D Transform</a></li>
+            <li><a href="#animations">Animations</a></li>
+          </ul>
+        </nav>
+        <div class="container">
+          <ul>
+            <li class="block" id="transition">
+              <header>
+                <h2 class="header">Transition</h2>
+              </header>
+              <div class="view-container">
+                <div class="description">
+                  <p>
+                    CSS transition is a property that lets you create gradual
+                    transitions between the values of CSS properties. The
+                    behavior of these transitions can be controlled by
+                    specifying their timing function, duration, delay.
+                  </p>
+                  <h3 class="subheader">Properties</h3>
+                  <ul>
+                    <li>transition</li>
+                    <li>transition-delay</li>
+                    <li>transition-duration</li>
+                    <li>transition-property</li>
+                    <li>transition-timing-function [ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n, n, n)]</li>
+                  </ul>
+
+                  <h3 class="subheader">Syntax</h3>
+                  <code>
+                    div {<br />
+                    &emsp;transition: {property} {duration} {timing-function}
+                    {delay};<br />
+                    }
+                  </code>
+
+                  <h3 class="subheader">Codepen</h3>
+                  <a
+                    class="codepen-link"
+                    target="_blank"
+                    href="https://codepen.io/ashu08/pen/GRdwwaV"
+                    >Link</a
+                  >
+                </div>
+                <div class="example">
+                  <h3 class="subheader">Example</h3>
+                  <div class="transition box1">No transition</div>
+                  <div class="transition box2">With transition</div>
+                </div>
+              </div>
+            </li>
+            <li class="block" id="transform">
+              <header>
+                <h2 class="header">Transform</h2>
+              </header>
+              <div class="view-container">
+                <div class="description">
+                  <p>
+                    By modifying the coordinate space, CSS transforms change the
+                    shape and position of the affected content without
+                    disrupting the normal document flow.
+                  </p>
+                  <h3 class="subheader">Properties</h3>
+                  <ul>
+                    <li>translate</li>
+                    <li>scale</li>
+                    <li>rotate</li>
+                    <li>skew</li>
+                    <li>perspective</li>
+                  </ul>
+
+                  <h3 class="subheader">Syntax</h3>
+                  <code>
+                    div {<br />
+                    &emsp;transform: translate(x,y);<br />
+                    &emsp;transform: scale(x,y);<br />
+                    &emsp;transform: rotate(angle);<br />
+                    &emsp;transform: skew(x-angle,y-angle);<br />
+                    }
+                  </code>
+                  <h3 class="subheader">Codepen</h3>
+                  <a
+                    class="codepen-link"
+                    target="_blank"
+                    href="https://codepen.io/ashu08/pen/YzLdEKE"
+                    >Link</a
+                  >
+                </div>
+                <div class="example">
+                  <h3 class="subheader">Example</h3>
+                  <div class="object-container transform translate">
+                    <div class="object">Translate</div>
+                    <code class="code">
+                        transform: translate(10px, -20px);
+                    </code>
+                  </div>
+                  <div class="object-container transform scale">
+                    <div class="object">Scale</div>
+                    <code class="code">
+                        transform: scale(1.2);
+                    </code>
+                  </div>
+                  <div class="object-container transform rotate">
+                    <div class="object">Rotate</div>
+                    <code class="code">
+                        transform: rotate(90deg);
+                    </code>
+                  </div>
+                  <div class="object-container transform skew">
+                    <div class="object">Skew</div>
+                    <code class="code">
+                        transform: skew(30deg,30deg);
+                    </code>
+                  </div>
+                  <div class="object-container transform origin">
+                    <div class="object">Transform Origin : right top</div>
+                    <code class="code">
+                        transform: rotate(90deg);<br>
+                        transform-origin: right top;
+                    </code>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block" id="3Dtransforms">
+              <header>
+                <h2 class="header">3D Transform</h2>
+              </header>
+              <div class="view-container">
+                <div class="description">
+                  <h3 class="subheader">Properties</h3>
+                  <ul>
+                    <li>translate3d(x,y,z)</li>
+                    <li>scale3d(x,y,z)</li>
+                    <li>rotate3d(x,y,z,angle)</li>
+                    <li>skew(x-angle,y-angle)</li>
+                    <li>perspective</li>
+                    <li>Matrix 3D</li>
+                  </ul>
+
+                  <h3 class="subheader">Syntax</h3>
+                  <code>
+                    div {<br />
+                    &emsp;transform: {property} {duration} {timing-function}
+                    {delay};<br />
+                    }
+                  </code>
+                  <h3 class="subheader">Codepen</h3>
+                  <a
+                    class="codepen-link"
+                    target="_blank"
+                    href="https://codepen.io/ashu08/pen/YzLdEKE"
+                    >Link</a
+                  >
+
+                  <h3 class="subheader">Diagram</h3>
+                  <img class="diagram" src="./image/xyz.png" alt="" />
+                </div>
+                <div class="example">
+                  <h3 class="subheader">Example</h3>
+                  <div class="object-container transform3d translate3d">
+                    <div class="object">Translate3d</div>
+                    <div class="code">
+                      <code>transform: translate3d(10px, 20px, 100px);</code>
+                    </div>
+                  </div>
+                  <div class="object-container transform3d translate3d2">
+                    <div class="object">Translate3d</div>
+                    <div class="code">
+                      <code
+                        >transform: perspective(500px) translate3d(10px, 20px,
+                        100px);</code
+                      >
+                    </div>
+                  </div>
+                  <div class="object-container transform3d scale">
+                    <div class="object">Scale</div>
+                    <div class="code">
+                      <code
+                        >transform: perspective(500px) scale3d(2, 0.7, 2)
+                        translateZ(100px);</code
+                      >
+                    </div>
+                  </div>
+                  <div class="object-container transform3d rotate3d">
+                    <div class="object">Rotate3d</div>
+                    <div class="code">
+                      <code>perspective: 400px;</code><br />
+                      <code>transform: rotate3d(0, 1 , 0, 45deg);</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block" id="animations">
+              <header>
+                <h2 class="header">Animation</h2>
+              </header>
+              <div class="view-container">
+                <div class="description">
+                  <p>
+                    Animations consist of two components, a style describing the
+                    CSS animation and a set of keyframes that indicate the start
+                    and end states of the animation's style, sa well as possible
+                    intermediate points
+                  </p>
+                  <h3 class="subheader">Properties</h3>
+                  <ul>
+                    <li>@keyframes</li>
+                    <li>animation-name</li>
+                    <li>animation-duration</li>
+                    <li>animation-delay</li>
+                    <li>animation-iteration-count</li>
+                    <li>animation-direction</li>
+                    <li>animation-timing-function</li>
+                    <li>animation-fill-mode</li>
+                    <li>animation</li>
+                  </ul>
+
+                  <h3 class="subheader">Syntax</h3>
+                  <code>
+                    @keyframes example { <br />
+                    &emsp;from {width: 0%;} <br />
+                    &emsp;to {width:100%;} <br />
+                    }
+                  </code>
+                  <code>
+                    @keyframes example { <br />
+                    &emsp;0% {widht: 0%;} <br />
+                    &emsp;25% {widht: 25%;} <br />
+                    &emsp;50% {widht: 50%;} <br />
+                    &emsp;100% {widht: 100%;}<br />
+                    }
+                  </code>
+                  <code>
+                    animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode];
+                  </code>
+
+                  <code>
+                    animation-name: example <br>
+                    animation-duration: 5s<br>
+                    animation-delay: 2s<br>
+                    animation-iteration-count: 3,infinite<br>
+                    animation-direction: normal, reverse,alternate,alternate-reverse; <br>
+                    animation-timing-function:ease, linear, ease-in,ease-out,ease-in-out,cubic-bezier(n,n,n,n) <br>
+                    animation-fill-mode: none, forwards, backwards, both<br>
+                  </code>
+                  <h3 class="subheader">Codepen</h3>
+                  <a
+                    class="codepen-link"
+                    target="_blank"
+                    href="https://codepen.io/ashu08/pen/YzLdEKE"
+                    >Link</a
+                  >
+                </div>
+                <div class="example">
+                  <h3 class="subheader">Example</h3>
+                  <div class="object-container animation translate3d">
+                    <div class="object">Animation from - to</div>
+                    <div class="code">
+                        <code>animation: object 3s linear;</code> <br><br>
+                        <code>
+                          @keyframes object{<br>
+                              &ensp;from{<br>
+                                  &emsp;  transform: translate(0px, 0px);<br>
+                            &ensp; } <br>
+                            &ensp;to{ <br>
+                              &emsp;  transform: translate(20px, 20px); <br>
+                              &ensp;} <br>
+                          }
+                        </code>
+                    </div>
+                  </div>
+                  <div class="object-container animation translate3d2">
+                    <div class="object">Animation %</div>
+                    <div class="code">
+                        <code>animation: object2 3s linear;</code> <br><br>
+                        <code>
+                          @keyframes object2{<br>
+                            &ensp;0%{<br>
+                              &emsp;transform: translate(0px, 0px);<br>
+                              &ensp;}<br>
+                              &ensp;25%{<br>
+                              &emsp;transform: translate(20px, 20px);<br>
+                              &ensp;}<br>
+                              &ensp;50%{<br>
+                              &emsp;transform: translate(-20px, -20px);<br>
+                              &ensp;}<br>
+                              &ensp;75%{<br>
+                              &emsp;transform: translate(20px, 20px);<br>
+                              &ensp;}<br>
+                              &ensp;100%{<br>
+                              &emsp;transform: translate(-20px, -20px);<br>
+                              &ensp;}<br>
+                          }
+                        </code>
+                    </div>
+                  </div>
+                  <div class="object-container animation translate3d3">
+                    <div class="object">Animation</div>
+                    <div class="code">
+                        <code>animation: object2 3s linear;</code> <br><br>
+                        <code>
+                          @keyframes animation{<br>
+                            &ensp;0%{<br>
+                              &emsp;border-radius: 0px;<br>
+                              &ensp;}<br>
+                              &ensp;25%{<br>
+                              &emsp;border-radius: 50px;<br>
+                              &ensp;}<br>
+                              &ensp;50%{<br>
+                              &emsp;transform: translate(100px, 100px);<br>
+                              &ensp;}<br>
+                              &ensp;75%{<br>
+                              &emsp;transform: rotate3d(1,0,1,45deg);<br>
+                              &ensp;}<br>
+                              &ensp;100%{<br>
+                              &emsp;transform: scale(2);<br>
+                              &ensp;}<br>
+                        }
+                        </code>
+                    </div>
+                  </div>
+                  <div class="object-container animation translate3d4">
+                    <div class="object">Animation 2</div>
+                    <div class="code">
+                        <code>
+                          animation-name:animation2; <br>
+                          animation-duration:5s; <br>
+                          animation-delay:linear; <br>
+                          animation-iteration-count:infinite; <br>
+                          animation-direction:alternate; <br>
+                          animation-timing-function:ease-out; <br>
+                          animation-fill-mode:both; <br>
+                        </code> <br><br>
+                        <code>
+                          @keyframes animation2{ <br>
+                            &ensp;0%{<br>
+                              &emsp; border-radius: 0px;<br>
+                              &ensp;}<br>
+                              &ensp;25%{<br>
+                              &emsp;transform: translate(100px, 0px);<br>
+                              &emsp;border-radius: 10px;<br>
+                              &emsp;background-color: #f1c40f;<br>
+                              &ensp;}<br>
+                              &ensp;50%{<br>
+                              &emsp;transform: translate(100px, 100px);<br>
+                              &emsp;border-radius: 30px;<br>
+                              &emsp;background-color: #e67e22;<br>
+                              &ensp;}<br>
+                              &ensp;75%{<br>
+                              &emsp;transform: translate(-100px, 100px);<br>
+                              &emsp;border-radius: 40px;<br>
+                              &emsp;background-color: #e74c3c;<br>
+                              &ensp;}<br>
+                              &ensp;100%{<br>
+                              &emsp;transform: translate(-100px, -100px);<br>
+                              &emsp;border-radius: 50px;<br>
+                              &emsp;background-color: #8e44ad;<br>
+                              &ensp;}<br>
+                          }
+                        </code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block" id="back-face-visibility">
+              <header>
+                <h2 class="header">Back face visibility</h2>
+              </header>
+              <div class="view-container">
+                <div class="description">
+                  <p>
+                    The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.
+                  </p>
+
+                  <h3 class="subheader">Syntax</h3>
+                  <code>
+                    backface-visibility: visible|hidden|initial|inherit;
+                  </code>
+
+                </div>
+                <div class="example">
+                  <h3 class="subheader">Example</h3>
+                  <div class="object-container backface-visibility visible">
+                    <div class="object">Back face visibility</div>
+                    <div class="code">
+                        <code>
+                          transform: rotate3d(0, 1, 0, 180deg);<br>
+                          backface-visibility: visible; 
+                        </code> <br><br>
+                    </div>
+                  </div>
+                  <div class="object-container backface-visibility hidden">
+                    <div class="object">Back face visibility</div>
+                    <div class="code">
+                        <code>
+                          transform: rotate3d(0, 1, 0, 180deg); <br>
+                          backface-visibility: hidden; 
+                        </code><br>
+                    </div>
+                  </div>
+
+                  <div class="object-container transform-style">
+                    <div class="object">
+                      <div class="object-child"></div>
+                    </div>
+                    <div class="code">
+                        <code>
+                          .object{ <br>
+                            perspective: 500px;<br>
+                            transform-style: preserve-3d;<br>
+                          }<br><br>
+                        
+                          .object-child{<br>
+                              height: 20px;<br>
+                              width: 300px;<br>
+                              background-color: red;<br>
+                              transform: rotateY(20deg);<br>
+                              position: absolute;<br>
+                          }
+                        </code><br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+	box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color: #e74c3c;
+    padding: 20px ;
+    position: fixed;
+    width: 50%;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+	max-height: 100vh;
+    width: 100vw;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+    color: #ffffff;
+}
+
+.block {
+	border-bottom: 1px solid white;
+	padding: 3rem;
+	background: #34495e;
+	scroll-snap-align: start;
+}
+
+.block:last-child{
+    padding-bottom: 600px;
+}
+
+header{
+    margin-bottom: 40px;
+}
+
+.subheader{
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: #c0392b;
+    text-underline-position: under;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header{
+    font-size: 34px;
+    text-decoration: underline;
+    text-decoration-color: #e74c3c;
+    text-underline-position: under;
+}
+
+.codepen-link{
+    color: #3498db;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.object-container{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #2ecc71;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.object-container .code{
+    position: absolute;
+    left: 150px;
+    width: 500px;
+    top: 10px;
+    display: none;
+    transition: all 0.5s linear;
+    line-height: 1.5;
+}
+
+.object-container:hover .code{
+    display: block;
+}
+
+.object{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    padding: 5px;
+}
+
+.view-container{
+    display: grid;
+    grid-template-columns:  1fr 2fr;
+    gap: 32px;
+}
+
+
+.description ul li{
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.description ul{
+    margin-bottom: 20px;
+    list-style-type: circle;
+}
+
+.description code {
+    margin-bottom: 20px;
+    display: block;
+    line-height: 1.5;
+}
+
+.example .transition.box1{
+    width: 100px;
+    height: 100px;
+    background-color: #d35400;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.example .transition.box2{
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    padding: 5px;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+
+}
+
+
+.example .transition.box1:hover{
+   width: 300px;
+}
+
+.example .transition.box2:hover{
+   width: 300px;
+}
+
+/* Transform */
+
+#transform .description .example{
+    display: grid;
+    grid-template-columns: repeat(2, 200px );
+}
+
+
+.example .transform.translate:hover .object{
+    transform: translate(10px, -20px);
+ }
+ 
+ .example .transform.scale:hover .object{
+    transform: scale(1.2);
+ }
+
+ .example .transform.rotate:hover .object{
+    transform: rotate(90deg);
+ }
+
+ .example .transform.skew:hover .object{
+    transform: skew(30deg,30deg);
+ }
+
+ .example .transform.origin:hover .object{
+    transform: rotate(90deg);
+    transform-origin: right top;
+ }
+
+ .diagram{
+    height: 300px;
+    width: 300px;
+ }
+
+ .example .transform3d{
+    position: relative;
+ }
+
+ .example .transform3d .code{
+    position: absolute;
+    top: 10px;
+    left: 134px;
+    display: none;
+    width: 400px;
+    transition: display 0.5s ease;
+    line-height: 1.5;
+ }
+
+ .example .transform3d:hover .code{
+    display: block;
+ }
+
+
+.example .transform3d.translate3d:hover .object{
+    transform: translate3d(10px, 20px, 100px);
+ }
+
+
+.example .transform3d.translate3d2:hover .object{
+    transform: perspective(500px) translate3d(10px, 20px, 100px);
+ }
+
+.example .transform3d.scale:hover .object{
+    transform: perspective(500px) scale3d(2, 0.7, 2) translateZ(100px);
+ }
+
+
+.example .transform3d.rotate3d{
+    perspective: 400px;
+ }
+
+.example .transform3d.rotate3d:hover .object{
+    transform: rotate3d(0, 1 , 0, 45deg);
+ }
+
+.example .transform3d.skew:hover .object{
+    transform: rotate3d(0, 1 , 0, 45deg);
+ }
+
+
+.animation.translate3d:hover .object{
+    animation: object 1s linear;
+}
+
+.animation.translate3d2:hover .object{
+    animation: object2 3s linear;
+}
+
+.animation.translate3d3
+{
+    perspective: 500px;
+}
+
+.animation.translate3d3:hover .object{
+    animation: animation 5s linear;
+}
+
+.animation.translate3d4:hover .object{
+    animation-name:animation2;
+    animation-duration:5s;
+    animation-delay:linear;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function:ease-out;
+    animation-fill-mode:both;
+}
+
+
+@keyframes object{
+    from{
+        transform: translate(0px, 0px);
+    }
+    to{
+        transform: translate(20px, 20px);
+    }
+}
+
+@keyframes object2{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(20px, 20px);
+    }
+    50%{
+        transform: translate(-20px, -20px);
+    }
+    75%{
+        transform: translate(20px, 20px);
+    }
+    100%{
+        transform: translate(-20px, -20px);
+    }
+}
+
+@keyframes animation{
+    0%{
+        border-radius: 0px;
+    }
+    25%{
+        border-radius: 50px;
+    }
+    50%{
+        transform: translate(100px, 100px);
+    }
+    75%{
+       transform: rotate3d(1,0,1,45deg);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+
+@keyframes animation2{
+    0%{
+        border-radius: 0px;
+    }
+    25%{
+        transform: translate(100px, 0px);
+        border-radius: 10px;
+        background-color: #f1c40f;
+    }
+    50%{
+        transform: translate(100px, 100px);
+        border-radius: 30px;
+        background-color: #e67e22;
+    }
+    75%{
+        transform: translate(-100px, 100px);
+        border-radius: 40px;
+        background-color: #e74c3c;
+    }
+    100%{
+        transform: translate(-100px, -100px);
+        border-radius: 50px;
+        background-color: #8e44ad;
+    }
+}
+
+.backface-visibility .object{
+    transition-duration: 3s;
+}
+
+.backface-visibility,
+.transform-style{
+     perspective: 500px; 
+}
+
+.backface-visibility.visible:hover .object{
+    transform: rotate3d(0, 1, 0, 180deg);   
+    backface-visibility: visible; 
+}
+
+.backface-visibility.hidden:hover .object{
+    transform: rotate3d(0, 1, 0, 180deg);   
+    backface-visibility: hidden; 
+}
+
+
+.object{
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+.object-child{
+    height: 20px;
+    width: 300px;
+    background-color: red;
+    transform: rotateY(20deg);
+    position: absolute;
+}
+
+.back-face-visibility{
+    margin-bottom: 400px;
+}
